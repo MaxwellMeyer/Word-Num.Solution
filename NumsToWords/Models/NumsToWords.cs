@@ -21,16 +21,26 @@ namespace NumWord
       {12,"twelve"},
       {13,"thirteen"},
       {14,"fourteen"},
-      {15,"fifteen"}
-
+      {15,"fifteen"},
+      {20, "twenty"},
+      {30, "thirty"},
+      {40, "forty"},
+      {50, "fifty"}
     };
 
     public static string NumToWord(int num)
     {
       if (num > 15 && num < 20)
       {
+        if (num - 10 == 8) return numWords[num - 10] + "een";
         return numWords[num - 10] + "teen";
       }
+      else if (num >= 60 && num < 100)
+      {
+        if (num / 10 == 8) return numWords[num / 10] + "y";
+        return numWords[num / 10] + "ty";
+      }
+
       return numWords[num];
     }
   }

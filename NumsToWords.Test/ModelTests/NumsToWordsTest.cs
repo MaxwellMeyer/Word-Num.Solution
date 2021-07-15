@@ -26,7 +26,7 @@ namespace NumWord.Tests
     public void NumToWord_ConvertsIntToString_ReturnsTeenWord()
     {
       List<string> expectations = new List<string> {
-        "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eightteen", "nineteen"
+        "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
       };
 
       for (int i = 0; i < expectations.Count; i++)
@@ -40,7 +40,7 @@ namespace NumWord.Tests
     public void NumToWord_ConvertsIntToString_ReturnsTensPlaceWord()
     {
       List<string> expectations = new List<string> {
-        "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
+        "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
       };
 
       for (int i = 0; i < expectations.Count; i++)
