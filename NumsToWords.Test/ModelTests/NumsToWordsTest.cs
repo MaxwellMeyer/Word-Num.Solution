@@ -22,5 +22,32 @@ namespace NumWord.Tests
         Assert.AreEqual(expectation, Converter.NumToWord(i + 1));
       }
     }
+    [TestMethod]
+    public void NumToWord_ConvertsIntToString_ReturnsTeenWord()
+    {
+      List<string> expectations = new List<string> {
+        "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eightteen", "nineteen"
+      };
+
+      for (int i = 0; i < expectations.Count; i++)
+      {
+        string expectation = expectations[i];
+        Assert.AreEqual(expectation, Converter.NumToWord(i + 11));
+      }
+    }
+
+    [TestMethod]
+    public void NumToWord_ConvertsIntToString_ReturnsTensPlaceWord()
+    {
+      List<string> expectations = new List<string> {
+        "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
+      };
+
+      for (int i = 0; i < expectations.Count; i++)
+      {
+        string expectation = expectations[i];
+        Assert.AreEqual(expectation, Converter.NumToWord((i + 1) * 10));
+      }
+    }
   }
 }
